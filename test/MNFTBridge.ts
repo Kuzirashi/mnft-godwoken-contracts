@@ -42,7 +42,7 @@ describe("MNFTBridge", function () {
       const bridge = await BridgeFactory.deploy();
 
       const NFTClassContractFactory = await ethers.getContractFactory("MNFTClassContract");
-      const nft = await NFTClassContractFactory.deploy(EXAMPLE_ISSUER_ID, EXAMPLE_CLASS_ID);
+      const nft = await NFTClassContractFactory.deploy('MNFT', 'MNFT', EXAMPLE_ISSUER_ID, EXAMPLE_CLASS_ID);
             
       await bridge.registerNFTClassContract(EXAMPLE_ISSUER_ID_AND_CLASS_ID, nft.address);
       

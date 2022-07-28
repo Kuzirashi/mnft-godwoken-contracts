@@ -12,7 +12,7 @@ contract MNFTClassContract is ERC721, ERC721Enumerable, ERC721URIStorage, Pausab
     bytes20 public issuerId;
     uint32 public classId;
 
-    constructor(bytes20 _issuerId, uint32 _classId) ERC721("mNFTClassContract", "MNFT") {
+    constructor(string memory name_, string memory symbol_, bytes20 _issuerId, uint32 _classId) ERC721(name_, symbol_) {
         issuerId = _issuerId;
         classId = _classId;
     }
